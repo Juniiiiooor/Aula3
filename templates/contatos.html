@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contatos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="contatos-page">
+  <div class="container">
+    <h2>Contatos</h2>
+
+    <ul class="contact-list">
+      <li><span>Email</span> contato@exemplo.com</li>
+      <li><span>Telefone</span> (48) 99999-0000</li>
+      <li><span>GitHub</span> github.com/exemplo</li>
+    </ul>
+
+    <a class="back" href="{{ url_for('home') }}">Voltar</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* ==========================================================================
+   1. Variáveis
+   ========================================================================== */
+:root {
+  --roxo: #667eea;
+  --roxo-escuro: #764ba2;
+  --roxo-hover: #5a67d8;
+  --roxo-escuro-hover: #6b46c1;
+
+  --grafite: #1f2937;
+  --grafite-escuro: #111827;
+
+  --texto: #333;
+  --texto-suave: #6b7280;
+  --branco: #fff;
+  --cinza: #f3f4f6;
+  --borda: #ccc;
+
+  --raio: 8px;
+  --raio-card: 15px;
+  --sombra: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --transicao: 0.3s ease;
+}
+
+/* ==========================================================================
+   2. Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--roxo), var(--roxo-escuro));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: var(--texto);
+}
+
+h2 {
+  margin: 0 0 20px;
+  color: var(--texto);
+}
+
+a {
+  color: var(--roxo-hover);
+}
+
+/* ==========================================================================
+   3. Card central
+   ========================================================================== */
+.container {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: var(--raio-card);
+  width: 350px;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: var(--sombra);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ==========================================================================
+   4. Botão / link em destaque
+   ========================================================================== */
+.back {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--grafite);
+  color: var(--branco);
+  border-radius: var(--raio);
+  text-decoration: none;
+  transition: var(--transicao);
+}
+
+.back:hover {
+  background: var(--grafite-escuro);
+}
+
+/* ==========================================================================
+   5. Página de contatos
+   ========================================================================== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.contact-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: var(--raio);
+  background: var(--cinza);
+}
+
+.contact-list li span {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--texto-suave);
+}
+
+/* ==========================================================================
+   6. Animação
+   ========================================================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   7. Responsivo
+   ========================================================================== */
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+}
